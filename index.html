@@ -2,18 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f6ecdc">
-
-<title>دعوة خطوبة سما ومحمد | تأكيد الحضور</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+<title>دعوة خطوبة سما ومحمد</title>
 
 <style>
-:root {
-  --gold: #977039;
-  --border: #d5b985;
-  --cream: #fffcf6;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -21,145 +14,136 @@
 body {
   margin: 0;
   background: #f5f0e9;
-  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: Tahoma, Arial, sans-serif;
   color: #412d20;
 }
 
 .wrap {
   max-width: 650px;
   min-height: 100vh;
-  margin: 0 auto;
-  background: var(--cream);
-  box-shadow: 0 12px 45px #3d2b1b13;
+  margin: auto;
+  background: #fffcf6;
 }
 
-img.invitation {
+.invitation {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.venue-link {
-  padding: 20px 20px 23px;
-  background: #fffaf0;
+.venue {
+  padding: 25px 20px;
   text-align: center;
-  border-top: 1px solid #e4ceb0;
+  background: #fffaf0;
   border-bottom: 1px solid #e4ceb0;
 }
 
-.venue-title {
-  margin: 0 0 7px;
-  color: #8e632e;
-  font-weight: 800;
-  font-size: 21px;
+.venue h2 {
+  color: #977039;
+  font-size: 23px;
 }
 
-.venue-text {
-  margin: 0 0 14px;
-  font-size: 15px;
-  line-height: 1.7;
+.venue p {
+  font-size: 16px;
 }
 
-.venue-link a {
+.map {
   display: block;
-  margin: auto;
-  max-width: 450px;
-  text-decoration: none;
-  border: 1px solid #bc9157;
-  background: linear-gradient(115deg, #99703b, #b48b53);
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 15px;
+  background: linear-gradient(
+    110deg,#99703b,#b48b53
+  );
   color: white;
-  padding: 15px 18px;
-  border-radius: 14px;
-  font-weight: 750;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 18px;
 }
 
 section {
-  padding: 25px 20px 34px;
+  padding: 30px 20px 40px;
   text-align: center;
-  background: linear-gradient(#fffaf0, #f9f1e2);
+  background: linear-gradient(
+    #fffaf0,#f9f1e2
+  );
 }
 
 h1 {
-  font-size: clamp(25px, 5vw, 33px);
   color: #8e632e;
-  margin: 0 0 12px;
-  font-weight: 750;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .sub {
-  font-size: 15px;
-  line-height: 1.85;
-  margin: 0 auto 22px;
-  max-width: 390px;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 25px;
 }
 
 .fields {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(110px, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 12px;
   text-align: right;
 }
 
 label {
-  font-size: 14px;
-  font-weight: 650;
   display: block;
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
 input, select {
   width: 100%;
-  height: 49px;
-  border: 1.5px solid var(--border);
+  height: 50px;
+  border: 1.5px solid #d5b985;
   border-radius: 12px;
   background: white;
-  color: #35281f;
-  padding: 0 12px;
+  padding: 10px;
   font-size: 16px;
   font-family: inherit;
-  outline-color: var(--gold);
 }
 
 button {
-  margin-top: 22px;
   width: 100%;
-  padding: 15px;
-  border: 0;
+  margin-top: 22px;
+  padding: 16px;
+  border: none;
   border-radius: 14px;
-  background: linear-gradient(110deg, #9f7035, #b38a53);
-  font: 700 18px system-ui;
+  background: linear-gradient(
+    110deg,#9f7035,#b38a53
+  );
   color: white;
+  font-size: 19px;
+  font-weight: bold;
   cursor: pointer;
 }
 
 button:disabled {
-  opacity: .65;
-  cursor: wait;
+  opacity: 0.65;
 }
 
-.msg {
-  min-height: 26px;
-  margin: 14px 0 0;
-  font-weight: 600;
-  font-size: 15px;
+.message {
+  margin-top: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  min-height: 25px;
 }
 
 .success {
-  color: #227444;
+  color: #208345;
 }
 
 .error {
   color: #ae2d30;
 }
 
-.info {
-  font-size: 13px;
-  margin-top: 14px;
-  color: #725e45;
+.waiting {
+  color: #977039;
 }
 
-.bottom {
+.info {
   font-size: 13px;
   margin-top: 18px;
   color: #756250;
@@ -172,7 +156,6 @@ button:disabled {
 }
 </style>
 </head>
-
 <body>
 
 <main class="wrap">
@@ -180,99 +163,112 @@ button:disabled {
 <img
   class="invitation"
   src="./invitation.jpg"
-  alt="دعوة خطوبة سما ومحمد، الجمعة ٢٣ أكتوبر ٢٠٢٦ الساعة الرابعة مساءً"
+  alt="دعوة خطوبة سما ومحمد"
 />
 
-<div class="venue-link">
-  <p class="venue-title">📍 موقع حفل الخطوبة</p>
+<div class="venue">
 
-  <p class="venue-text">
+  <h2>📍 موقع حفل الخطوبة</h2>
+
+  <p>
     قاعة سيليا – نادي الصيادلة بطلخا
   </p>
 
   <a
+    class="map"
     href="https://maps.app.goo.gl/offCj6zJ79doP9Uk8?g_st=ic"
     target="_blank"
     rel="noopener noreferrer"
   >
     📍 افتح موقع القاعة على خرائط Google ↗
   </a>
+
 </div>
 
 <section>
 
-<h1>♡ تأكيد الحضور ♡</h1>
+  <h1>♡ تأكيد الحضور ♡</h1>
 
-<p class="sub">
-  يسعدنا تشريفكم. يرجى كتابة الاسم الثنائي
-  واختيار عدد الحاضرين.
-</p>
+  <p class="sub">
+    يسعدنا تشريفكم. يرجى كتابة الاسم الثنائي
+    واختيار عدد الحاضرين.
+  </p>
 
-<form id="rsvp">
+  <form id="rsvp">
 
-<div class="fields">
+    <div class="fields">
 
-<div>
-  <label for="guestName">الاسم الثنائي</label>
-  <input
-    id="guestName"
-    maxlength="100"
-    required
-    autocomplete="name"
-    placeholder="مثال: أحمد محمد"
-  >
-</div>
+      <div>
+        <label for="guestName">
+          الاسم الثنائي
+        </label>
 
-<div>
-  <label for="people">عدد الحاضرين</label>
+        <input
+          type="text"
+          id="guestName"
+          name="guestName"
+          maxlength="100"
+          autocomplete="name"
+          placeholder="مثال: أحمد محمد"
+          required
+        >
+      </div>
 
-  <select id="people" required>
-    <option value="">اختر العدد</option>
-    <option value="1">١</option>
-    <option value="2">٢</option>
-    <option value="3">٣</option>
-    <option value="4">٤</option>
-    <option value="5">٥</option>
-  </select>
-</div>
+      <div>
+        <label for="people">
+          عدد الحاضرين
+        </label>
 
-</div>
+        <select id="people" required>
+          <option value="">
+            اختر العدد
+          </option>
+          <option value="1">١</option>
+          <option value="2">٢</option>
+          <option value="3">٣</option>
+          <option value="4">٤</option>
+          <option value="5">٥</option>
+        </select>
+      </div>
 
-<button type="submit" id="send">
-  تأكيد الحضور
-</button>
+    </div>
 
-<p
-  id="message"
-  role="status"
-  aria-live="polite"
-  class="msg"
-></p>
+    <button type="submit" id="send">
+      تأكيد الحضور
+    </button>
 
-</form>
+    <p
+      id="message"
+      class="message"
+      role="status"
+      aria-live="polite"
+    ></p>
 
-<p class="info">
-  التسجيل مجاني، ويُحفظ في قائمة الحضور الخاصة بالمناسبة.
-</p>
+  </form>
 
-<div class="bottom">
-  سما ♡ محمد — ٢٣ أكتوبر ٢٠٢٦
-</div>
+  <p class="info">
+    التسجيل مجاني، ويُحفظ في قائمة الحضور الخاصة بالمناسبة.
+  </p>
+
+  <p class="info">
+    سما ♡ محمد — ٢٣ أكتوبر ٢٠٢٦
+  </p>
 
 </section>
+
 </main>
 
 <iframe
-  name="rsvp_receiver"
   id="receiver"
-  style="width:0;height:0;border:0;position:absolute;left:-9999px"
+  name="rsvp_receiver"
   title="معالجة تسجيل الحضور"
+  style="display:none"
 ></iframe>
 
 <form
+  id="relay"
   method="POST"
   target="rsvp_receiver"
-  id="relay"
   action="https://script.google.com/macros/s/AKfycbxPxiB86rbP9hLSUJK5jfIFV41fvuJ_2-pyf27-gsVX-0wAygAxNZJZ8WwmafowxWkW/exec"
   hidden
 >
@@ -280,129 +276,194 @@ button:disabled {
   <input type="hidden" name="count">
   <input type="hidden" name="requestId">
 </form>
-
 <script>
 (function () {
+  "use strict";
 
-  const f = document.getElementById('rsvp');
-  const relay = document.getElementById('relay');
-  const btn = document.getElementById('send');
-  const msg = document.getElementById('message');
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxPxiB86rbP9hLSUJK5jfIFV41fvuJ_2-pyf27-gsVX-0wAygAxNZJZ8WwmafowxWkW/exec";
 
-  let pending = null;
-  let timeout = null;
+  const form = document.getElementById("rsvp");
+  const relay = document.getElementById("relay");
+  const button = document.getElementById("send");
+  const message = document.getElementById("message");
 
-  function status(text, success) {
-    msg.className = 'msg ' + (success ? 'success' : 'error');
-    msg.textContent = text;
+  let busy = false;
+
+  function showMessage(text, type) {
+    message.textContent = text;
+    message.className = "message " + type;
   }
 
-  function restore() {
-    btn.disabled = false;
-    btn.textContent = 'تأكيد الحضور';
+  function setBusy(value) {
+    busy = value;
+    button.disabled = value;
+    button.textContent = value
+      ? "جارٍ تأكيد التسجيل..."
+      : "تأكيد الحضور";
   }
 
-  window.addEventListener('message', function (event) {
+  // استعلام للتحقق من أن التسجيل محفوظ
+  function checkRegistration(requestId) {
+    return new Promise(function (resolve, reject) {
 
-    if (
-      !pending ||
-      !event.data ||
-      event.data.type !== 'rsvp-result' ||
-      event.data.requestId !== pending
-    ) return;
+      const callbackName = "rsvpCheckResult";
+      const oldCallback = window[callbackName];
 
-    if (
-      event.origin !== 'https://script.google.com' &&
-      !event.origin.endsWith('.googleusercontent.com')
-    ) return;
+      const script = document.createElement("script");
 
-    clearTimeout(timeout);
-    pending = null;
-    restore();
+      let finished = false;
 
-    if (event.data.ok) {
-      status('تم تسجيل حضوركم بنجاح. شكرًا لكم!', true);
-      f.reset();
-    } else {
-      status(
-        event.data.message ||
-        'تعذر حفظ التسجيل. يُرجى المحاولة لاحقًا.',
-        false
+      const timer = setTimeout(function () {
+        finish(new Error("انتهت مهلة التحقق"));
+      }, 10000);
+
+      function finish(error, result) {
+        if (finished) return;
+        finished = true;
+
+        clearTimeout(timer);
+        script.remove();
+
+        if (oldCallback === undefined) {
+          delete window[callbackName];
+        } else {
+          window[callbackName] = oldCallback;
+        }
+
+        if (error) reject(error);
+        else resolve(result);
+      }
+
+      window[callbackName] = function (data) {
+        if (!data || data.requestId !== requestId) {
+          return;
+        }
+
+        finish(null, data.found === true);
+      };
+
+      script.onerror = function () {
+        finish(new Error("تعذر الاتصال بالخادم"));
+      };
+
+      script.src =
+        SCRIPT_URL +
+        "?requestId=" +
+        encodeURIComponent(requestId) +
+        "&t=" +
+        Date.now();
+
+      document.head.appendChild(script);
+    });
+  }
+
+  function waitForRegistration(requestId) {
+    return new Promise(function (resolve) {
+
+      let attempts = 0;
+      const maxAttempts = 6;
+
+      async function check() {
+        attempts++;
+
+        try {
+          const found = await checkRegistration(requestId);
+
+          if (found) {
+            resolve(true);
+            return;
+          }
+        } catch (error) {
+          console.warn("تعذر التحقق:", error);
+        }
+
+        if (attempts >= maxAttempts) {
+          resolve(false);
+          return;
+        }
+
+        setTimeout(check, 2000);
+      }
+
+      check();
+    });
+  }
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (busy) return;
+
+    const name = document
+      .getElementById("guestName")
+      .value.trim().replace(/\s+/g, " ");
+
+    const count = document.getElementById("people").value;
+
+    if (name.length < 5 || name.split(" ").length < 2) {
+      showMessage(
+        "يرجى كتابة الاسم الثنائي بشكل صحيح.",
+        "error"
       );
+      return;
     }
 
-  });
-
-  f.addEventListener('submit', function (e) {
-
-    e.preventDefault();
-
-    if (pending) return;
-
-    const name = document.getElementById('guestName')
-      .value.trim().replace(/\s+/g, ' ');
-
-    const count = document.getElementById('people').value;
-
-    if (
-      name.split(' ').length < 2 ||
-      name.length < 5 ||
-      name.length > 100
-    ) {
-      return status(
-        'الرجاء إدخال الاسم الثنائي بشكل صحيح.',
-        false
+    if (!["1", "2", "3", "4", "5"].includes(count)) {
+      showMessage(
+        "يرجى اختيار عدد الحاضرين.",
+        "error"
       );
+      return;
     }
 
-    if (!['1', '2', '3', '4', '5'].includes(count)) {
-      return status(
-        'اختر عدد الحاضرين من ١ إلى ٥.',
-        false
-      );
-    }
-
-    pending =
-      'r' +
+    const requestId =
+      "r" +
       Date.now().toString(36) +
       Math.random().toString(36).slice(2);
 
-    relay.elements.namedItem('name').value = name;
-    relay.elements.namedItem('count').value = count;
-    relay.elements.namedItem('requestId').value = pending;
+    relay.elements.namedItem("name").value = name;
+    relay.elements.namedItem("count").value = count;
+    relay.elements.namedItem("requestId").value = requestId;
 
-    btn.disabled = true;
-    btn.textContent = 'جارٍ إرسال التسجيل…';
+    setBusy(true);
 
-    msg.textContent = '';
-    msg.className = 'msg';
+    showMessage(
+      "جارٍ إرسال بيانات الحضور والتحقق منها...",
+      "waiting"
+    );
 
     try {
       relay.submit();
-    } catch (err) {
-      pending = null;
-      restore();
 
-      return status(
-        'تعذر إرسال البيانات. حاول مرة أخرى.',
-        false
+      // الانتظار قليلًا للسماح بحفظ البيانات
+      await new Promise(function (resolve) {
+        setTimeout(resolve, 2000);
+      });
+
+      const saved = await waitForRegistration(requestId);
+
+      if (saved) {
+        showMessage(
+          "تم تسجيل حضوركم بنجاح. شكرًا لكم! ♡",
+          "success"
+        );
+        form.reset();
+      } else {
+        showMessage(
+          "تعذر التأكد من نتيجة التسجيل. يرجى التواصل مع صاحب الدعوة قبل إعادة المحاولة.",
+          "error"
+        );
+      }
+
+    } catch (error) {
+      showMessage(
+        "تعذر التأكد من التسجيل. يرجى المحاولة لاحقًا بعد التحقق من قائمة الحضور.",
+        "error"
       );
+    } finally {
+      setBusy(false);
     }
-
-    timeout = setTimeout(function () {
-
-      if (!pending) return;
-
-      pending = null;
-      restore();
-
-      status(
-        'لم يصل تأكيد من الخادم. تحقق من جدول الحضور قبل إعادة التسجيل حتى لا يتكرر الاسم.',
-        false
-      );
-
-    }, 18000);
-
   });
 
 })();
