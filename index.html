@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,105 +6,344 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6ecdc">
 <title>دعوة خطوبة سما ومحمد | تأكيد الحضور</title>
+
 <style>
-:root{color-scheme:light;--gold:#977039;--border:#d5b985;--cream:#fffcf6}
-*{box-sizing:border-box}
-body{margin:0;background:#f5f0e9;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:#412d20}
-.wrap{max-width:650px;margin:0 auto;background:var(--cream);box-shadow:0 12px 45px #3d2b1b13;min-height:100vh}
-img.invitation{display:block;width:100%;height:auto}
-section{padding:25px 20px 34px;text-align:center;background:linear-gradient(#fffaf0,#f9f1e2)}
-h1{font-size:clamp(25px,5vw,33px);color:#8e632e;margin:0 0 12px;font-weight:750}
-.sub{font-size:15px;line-height:1.85;margin:0 auto 22px;max-width:390px}
-.fields{display:grid;grid-template-columns:minmax(0,2fr) minmax(110px,1fr);gap:12px;text-align:right}
-label{font-size:14px;font-weight:650;display:block;margin-bottom:8px}
-input,select{width:100%;height:49px;border:1.5px solid var(--border);border-radius:12px;background:#fff;color:#35281f;padding:0 12px;font-size:16px;font-family:inherit;outline-color:var(--gold)}
-button{margin-top:22px;width:100%;padding:15px;border:0;border-radius:14px;background:linear-gradient(110deg,#9f7035,#b38a53);font:700 18px system-ui;color:white;cursor:pointer}
-button:disabled{opacity:.65;cursor:wait}
-.msg{min-height:26px;margin:14px 0 0;font-weight:600;font-size:15px}
-.success{color:#227444}
-.error{color:#ae2d30}
-.notice{color:#73552d}
-.bottom{font-size:13px;margin-top:18px;color:#756250}
-.info{font-size:13px;margin-top:14px;color:#725e45}
-@media(max-width:365px){.fields{grid-template-columns:1fr}}
-.venue-link{padding:20px 20px 23px;background:#fffaf0;text-align:center;border-top:1px solid #e4ceb0;border-bottom:1px solid #e4ceb0}
-.venue-title{margin:0 0 7px;color:#8e632e;font-weight:800;font-size:21px}
-.venue-text{margin:0 0 14px;font-size:15px;line-height:1.7}
-.venue-link a{display:block;margin:auto;max-width:450px;text-decoration:none;border:1px solid #bc9157;background:linear-gradient(115deg,#99703b,#b48b53);color:#fff;padding:15px 18px;border-radius:14px;font-weight:750;font-size:18px}
-.venue-link a:focus-visible{outline:3px solid #775127;outline-offset:3px}
+:root {
+  color-scheme:light;
+  --gold:#977039;
+  --border:#d5b985;
+  --cream:#fffcf6;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  background:#f5f0e9;
+  font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
+  color:#412d20;
+}
+.wrap {
+  max-width:650px;
+  margin:0 auto;
+  background:var(--cream);
+  box-shadow:0 12px 45px #3d2b1b13;
+  min-height:100vh;
+}
+img.invitation {display:block;width:100%;height:auto}
+section {
+  padding:25px 20px 34px;
+  text-align:center;
+  background:linear-gradient(#fffaf0,#f9f1e2);
+}
+h1 {
+  font-size:clamp(25px,5vw,33px);
+  color:#8e632e;
+  margin:0 0 12px;
+  font-weight:750;
+}
+.sub {
+  font-size:15px;
+  line-height:1.85;
+  margin:0 auto 22px;
+  max-width:390px;
+}
+.fields {
+  display:grid;
+  grid-template-columns:minmax(0,2fr) minmax(110px,1fr);
+  gap:12px;
+  text-align:right;
+}
+label {
+  font-size:14px;
+  font-weight:650;
+  display:block;
+  margin-bottom:8px;
+}
+input,select {
+  width:100%;
+  height:49px;
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  color:#35281f;
+  padding:0 12px;
+  font-size:16px;
+  font-family:inherit;
+  outline-color:var(--gold);
+}
+button {
+  margin-top:22px;
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:14px;
+  background:linear-gradient(110deg,#9f7035,#b38a53);
+  font:700 18px system-ui;
+  color:white;
+  cursor:pointer;
+}
+button:disabled {opacity:.65;cursor:wait}
+.msg {
+  min-height:26px;
+  margin:14px 0 0;
+  font-weight:600;
+  font-size:15px;
+}
+.success {color:#227444}
+.error {color:#ae2d30}
+.notice {color:#73552d}
+.bottom {
+  font-size:13px;
+  margin-top:18px;
+  color:#756250;
+}
+.info {
+  font-size:13px;
+  margin-top:14px;
+  color:#725e45;
+}
+.venue-link {
+  padding:20px 20px 23px;
+  background:#fffaf0;
+  text-align:center;
+  border-top:1px solid #e4ceb0;
+  border-bottom:1px solid #e4ceb0;
+}
+.venue-title {
+  margin:0 0 7px;
+  color:#8e632e;
+  font-weight:800;
+  font-size:21px;
+}
+.venue-text {
+  margin:0 0 14px;
+  font-size:15px;
+  line-height:1.7;
+}
+.venue-link a {
+  display:block;
+  margin:auto;
+  max-width:450px;
+  text-decoration:none;
+  border:1px solid #bc9157;
+  background:linear-gradient(115deg,#99703b,#b48b53);
+  color:#fff;
+  padding:15px 18px;
+  border-radius:14px;
+  font-weight:750;
+  font-size:18px;
+}
+.venue-link a:focus-visible {
+  outline:3px solid #775127;
+  outline-offset:3px;
+}
+@media(max-width:365px) {
+  .fields {grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 <main class="wrap">
-<img class="invitation" src="./invitation.jpg" alt="دعوة حفل خطوبة سما ومحمد، الجمعة ٢٣ أكتوبر ٢٠٢٦ الساعة الرابعة مساءً، قاعة سيليا - نادي الصيادلة بطلخا"/>
+
+<img
+  class="invitation"
+  src="./invitation.jpg"
+  alt="دعوة حفل خطوبة سما ومحمد، الجمعة ٢٣ أكتوبر ٢٠٢٦ الساعة الرابعة مساءً، قاعة سيليا - نادي الصيادلة بطلخا"
+>
+
 <div class="venue-link">
-<p class="venue-title">📍 موقع حفل الخطوبة</p>
-<p class="venue-text">قاعة سيليا – نادي الصيادلة بطلخا</p>
-<a href="https://maps.app.goo.gl/offCj6zJ79doP9Uk8?g_st=ic" target="_blank" rel="noopener noreferrer" aria-label="فتح موقع القاعة على خرائط Google">📍 افتح موقع القاعة على خرائط Google ↗</a>
+  <p class="venue-title">📍 موقع حفل الخطوبة</p>
+  <p class="venue-text">قاعة سيليا – نادي الصيادلة بطلخا</p>
+  <a
+    href="https://maps.app.goo.gl/offCj6zJ79doP9Uk8?g_st=ic"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="فتح موقع القاعة على خرائط Google"
+  >📍 افتح موقع القاعة على خرائط Google ↗</a>
 </div>
+
 <section>
-<h1>♡ تأكيد الحضور ♡</h1>
-<p class="sub">يسعدنا تشريفكم. يرجى كتابة الاسم الثنائي واختيار عدد الحاضرين.</p>
-<form id="rsvp">
-<div class="fields">
-<div>
-<label for="guestName">الاسم الثنائي</label>
-<input id="guestName" maxlength="100" required autocomplete="name" placeholder="مثال: أحمد محمد">
-</div>
-<div>
-<label for="people">عدد الحاضرين</label>
-<select id="people" required>
-<option value="">اختر العدد</option>
-<option value="1">١</option>
-<option value="2">٢</option>
-<option value="3">٣</option>
-<option value="4">٤</option>
-<option value="5">٥</option>
-</select>
-</div>
-</div>
-<button type="submit" id="send">تأكيد الحضور</button>
-<p id="message" role="status" aria-live="polite" class="msg"></p>
-</form>
-<p class="info">التسجيل مجاني، ويُحفظ في قائمة الحضور الخاصة بالمناسبة.</p>
-<div class="bottom">سما ♡ محمد — ٢٣ أكتوبر ٢٠٢٦</div>
+  <h1>♡ تأكيد الحضور ♡</h1>
+  <p class="sub">
+    يسعدنا تشريفكم. يرجى كتابة الاسم الثنائي واختيار عدد الحاضرين.
+  </p>
+
+  <form id="rsvp">
+    <div class="fields">
+      <div>
+        <label for="guestName">الاسم الثنائي</label>
+        <input
+          id="guestName"
+          maxlength="100"
+          required
+          autocomplete="name"
+          placeholder="مثال: أحمد محمد"
+        >
+      </div>
+      <div>
+        <label for="people">عدد الحاضرين</label>
+        <select id="people" required>
+          <option value="">اختر العدد</option>
+          <option value="1">١</option>
+          <option value="2">٢</option>
+          <option value="3">٣</option>
+          <option value="4">٤</option>
+          <option value="5">٥</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="send">تأكيد الحضور</button>
+    <p id="message" role="status" aria-live="polite" class="msg"></p>
+  </form>
+
+  <p class="info">
+    التسجيل مجاني، ويُحفظ في قائمة الحضور الخاصة بالمناسبة.
+  </p>
+  <div class="bottom">
+    سما ♡ محمد — ٢٣ أكتوبر ٢٠٢٦
+  </div>
 </section>
 </main>
-<iframe name="rsvp_receiver" id="receiver" style="width:0;height:0;border:0;position:absolute;left:-9999px" title="معالجة تسجيل الحضور"></iframe>
-<form method="POST" target="rsvp_receiver" id="relay" action="https://script.google.com/macros/s/[InternetShortcut]
-URL=https://script.google.com/macros/s/AKfycbw67_PixGN56yqvHcQvSXe6YK35iimsugL2JFXtwuloZsz1GGk3gaAmJc0gvlI97xo/exec
-<input type="hidden" name="name">
-<input type="hidden" name="count">
-<input type="hidden" name="requestId">
+
+<iframe
+  name="rsvp_receiver"
+  id="receiver"
+  style="width:0;height:0;border:0;position:absolute;left:-9999px"
+  title="معالجة تسجيل الحضور"
+></iframe>
+
+<form
+  method="POST"
+  target="rsvp_receiver"
+  id="relay"
+  action="https://script.google.com/macros/s/AKfycbw67_PixGN56yqvHcQvSXe6YK35iimsugL2JFXtwuloZsz1GGk3gaAmJc0gvlI97xo/exec"
+  hidden
+>
+  <input type="hidden" name="name">
+  <input type="hidden" name="count">
+  <input type="hidden" name="requestId">
 </form>
+
 <script>
-(function(){
-  const f=document.getElementById('rsvp'),relay=document.getElementById('relay'),btn=document.getElementById('send'),msg=document.getElementById('message');
-  let pending=null;let timeout=null;
-  function status(text,success){msg.className='msg '+(success?'success':'error');msg.textContent=text;}
-  function restore(){btn.disabled=false;btn.textContent='تأكيد الحضور';}
-  window.addEventListener('message',function(event){
-    // Browser delivers an acknowledgement from the Apps Script response, only if requestId matches.
-    if(!pending || !event.data || event.data.type!=='rsvp-result' || event.data.requestId!==pending) return;
-    if(event.origin!=='https://script.google.com' && !event.origin.endsWith('.googleusercontent.com')) return;
-    clearTimeout(timeout);pending=null;restore();
-    if(event.data.ok){status('تم تسجيل حضوركم بنجاح. شكرًا لكم!',true);f.reset();}
-    else status(event.data.message || 'تعذر حفظ التسجيل. يُرجى المحاولة لاحقًا.',false);
+(function () {
+  'use strict';
+
+  var form = document.getElementById('rsvp');
+  var relay = document.getElementById('relay');
+  var btn = document.getElementById('send');
+  var msg = document.getElementById('message');
+  var pending = null;
+  var timer = null;
+
+  function show(text, kind) {
+    msg.className = 'msg ' + kind;
+    msg.textContent = text;
+  }
+
+  function resetButton() {
+    btn.disabled = false;
+    btn.textContent = 'تأكيد الحضور';
+  }
+
+  function sendRegistration() {
+    // استجابة فورية عند الضغط على الزر.
+    if (pending) {
+      show('طلب التسجيل قيد المعالجة. يرجى الانتظار.', 'notice');
+      return;
+    }
+
+    var name = document.getElementById('guestName')
+      .value.trim().replace(/\s+/g, ' ');
+    var count = document.getElementById('people').value;
+
+    if (
+      name.length < 5 ||
+      name.length > 100 ||
+      name.split(' ').length < 2
+    ) {
+      show('يُرجى إدخال الاسم الثنائي بشكل صحيح.', 'error');
+      return;
+    }
+
+    if (!/^[1-5]$/.test(count)) {
+      show('اختر عدد الحاضرين من ١ إلى ٥.', 'error');
+      return;
+    }
+
+    pending = 'r' + Date.now().toString(36)
+      + Math.random().toString(36).slice(2);
+
+    relay.elements.namedItem('name').value = name;
+    relay.elements.namedItem('count').value = count;
+    relay.elements.namedItem('requestId').value = pending;
+
+    btn.disabled = true;
+    btn.textContent = 'جارٍ إرسال التسجيل…';
+    show('جارٍ التواصل مع نظام تسجيل الحضور…', 'notice');
+
+    try {
+      relay.submit();
+    } catch (err) {
+      pending = null;
+      resetButton();
+      show('تعذّر بدء الإرسال. يرجى المحاولة لاحقًا.', 'error');
+      return;
+    }
+
+    clearTimeout(timer);
+
+    timer = setTimeout(function () {
+      if (!pending) return;
+
+      pending = null;
+      btn.textContent = 'تم إرسال الطلب';
+      btn.disabled = true;
+
+      show(
+        'أُرسل الطلب، لكن لم يصل تأكيد الحفظ. تحقّق من جدول الحضور قبل أي محاولة أخرى.',
+        'notice'
+      );
+    }, 18000);
+  }
+
+  btn.addEventListener('click', sendRegistration);
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    sendRegistration();
   });
-  f.addEventListener('submit',function(e){
-    e.preventDefault();if(pending)return;
-    const name=document.getElementById('guestName').value.trim().replace(/\s+/g,' '), count=document.getElementById('people').value;
-    if(name.split(' ').length<2 || name.length<5 || name.length>100) return status('الرجاء إدخال الاسم الثنائي بشكل صحيح.',false);
-    if(!['1','2','3','4','5'].includes(count)) return status('اختر عدد الحاضرين من ١ إلى ٥.',false);
-    pending='r'+Date.now().toString(36)+Math.random().toString(36).slice(2);
-    relay.elements.namedItem('name').value=name;
-    relay.elements.namedItem('count').value=count;
-    relay.elements.namedItem('requestId').value=pending;
-    btn.disabled=true;btn.textContent='جارٍ إرسال التسجيل…';msg.textContent='';msg.className='msg';
-    try{relay.submit();}catch(err){pending=null;restore();return status('تعذر إرسال البيانات. حاول مرة أخرى.',false);}
-    timeout=setTimeout(function(){if(!pending)return;pending=null;btn.disabled=true;btn.textContent='تم إرسال الطلب';msg.className='msg notice';msg.textContent='تم إرسال طلب الحضور. يرجى عدم إعادة التسجيل لتجنب تكرار الاسم.';},18000);
+
+  window.addEventListener('message', function (event) {
+    if (
+      !pending ||
+      !event.data ||
+      event.data.type !== 'rsvp-result' ||
+      event.data.requestId !== pending
+    ) return;
+
+    if (
+      event.origin !== 'https://script.google.com' &&
+      !event.origin.endsWith('.googleusercontent.com')
+    ) return;
+
+    clearTimeout(timer);
+    pending = null;
+    resetButton();
+
+    if (event.data.ok === true) {
+      show('تم تسجيل حضوركم بنجاح. شكرًا لكم!', 'success');
+      form.reset();
+    } else {
+      show(
+        event.data.message ||
+        'لم يتم حفظ التسجيل. يرجى مراجعة مسؤول الدعوة.',
+        'error'
+      );
+    }
   });
 })();
 </script>
+
 </body>
 </html>
