@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -14,6 +15,8 @@
   --cream:#fffcf6;
 }
 * { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
 
 body {
   margin:0;
@@ -159,13 +162,80 @@ footer {
   outline:3px solid #775127;
   outline-offset:3px;
 }
+
+/* زر الموسيقى */
+.music-btn {
+  position:fixed;
+  top:calc(14px + env(safe-area-inset-top));
+  left:max(14px,calc((100vw - 650px)/2 + 14px));
+  z-index:100;
+  width:52px;
+  height:52px;
+  margin:0;
+  padding:0;
+  border:1px solid #e5cda2;
+  border-radius:50%;
+  background:linear-gradient(135deg,#a97c42,#805622);
+  color:#fff;
+  font-size:24px;
+  box-shadow:0 4px 15px #0003;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+}
+.music-btn:focus-visible,
+.scroll-hint:focus-visible {
+  outline:3px solid #6e4b20;
+  outline-offset:3px;
+}
+
+/* سهم الانتقال لأسفل */
+.scroll-hint {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:3px;
+  padding:12px;
+  background:#fffaf0;
+  color:#8e632e;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+}
+.scroll-arrow {
+  font-size:29px;
+  line-height:1.2;
+  animation:arrowBounce 1.6s infinite;
+}
+@keyframes arrowBounce {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(7px); }
+}
 @media(max-width:365px) {
   .fields {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  .scroll-arrow {animation:none}
 }
 </style>
 </head>
 
 <body>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="./يا دبلة الخطوبة.m4a" type="audio/mp4">
+</audio>
+
+<button
+  id="musicBtn"
+  class="music-btn"
+  type="button"
+  aria-label="تشغيل الموسيقى"
+  aria-pressed="false"
+  title="تشغيل الموسيقى"
+>♫</button>
+
 <main class="wrap">
 
 <img
@@ -174,7 +244,12 @@ footer {
   alt="دعوة حفل خطوبة سما ومحمد، الجمعة ٢٣ أكتوبر ٢٠٢٦ الساعة الرابعة مساءً، قاعة سيليا - نادي الصيادلة بطلخا"
 />
 
-<div class="venue-link">
+<a href="#venue" class="scroll-hint">
+  <span>اسحب لأسفل لمشاهدة التفاصيل</span>
+  <span class="scroll-arrow" aria-hidden="true">↓</span>
+</a>
+
+<div class="venue-link" id="venue">
   <p class="venue-title">📍 موقع حفل الخطوبة</p>
   <p class="venue-text">
     قاعة سيليا – نادي الصيادلة بطلخا
@@ -440,6 +515,45 @@ footer {
       verify();
     }
   });
+})();
+</script>
+
+<script>
+(function() {
+  'use strict';
+
+  const music = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+
+  function updateButton() {
+    const playing = !music.paused;
+    btn.textContent = playing ? 'Ⅱ' : '♫';
+    btn.setAttribute('aria-pressed', String(playing));
+    btn.setAttribute(
+      'aria-label',
+      playing ? 'إيقاف الموسيقى' : 'تشغيل الموسيقى'
+    );
+    btn.title = playing ? 'إيقاف الموسيقى' : 'تشغيل الموسيقى';
+  }
+
+  btn.addEventListener('click', async function() {
+    if (!music.paused) {
+      music.pause();
+      return;
+    }
+
+    try {
+      await music.play();
+    } catch (error) {
+      btn.title = 'تعذر تشغيل الموسيقى';
+      alert('تعذر تشغيل الموسيقى. تأكد من اتصال الإنترنت.');
+    }
+  });
+
+  music.addEventListener('play', updateButton);
+  music.addEventListener('pause', updateButton);
+  music.addEventListener('ended', updateButton);
+  updateButton();
 })();
 </script>
 
